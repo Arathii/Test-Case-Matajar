@@ -1,0 +1,49 @@
+<div class="container" style="background: aliceblue;">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Edit Tutorial</h1>
+                    <h6>Please enter below!</h6>
+                </div>
+                <form style="border:2px solid DodgerBlue; background: rgba(22, 148, 206, 0); align-self: center; width: 50%; height: 50%;">
+                    <form [formGroup]="editForm" (ngsubmit)="updatesignup()"  >
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">First_Name</label>
+                            <input type="text" class="form-control" formControlName="First_Name" id="exampleInputPassword1" placeholder=" Name" >
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Last_Name</label>
+                            <input type="text" class="form-control" formControlName="First_Name" id="exampleInputPassword1" >
+                            
+                          </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Author Email Address" ><br>
+                          <span class="text-danger" *ngIf="editForm.controls['email'].dirty && editForm.hasError('required','email')">*Email id is required</span>
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input type="text" class="form-control" formControlName="Password" id="exampleInputPassword1" placeholder="Password" >
+                        </div>
+                        
+                        
+
+                        
+                        
+                        <button type="submit"  class="btn btn-dark" routerLink="/tutorialdash">Close</button>&nbsp;
+                        <button type="submit" [disabled]='!editForm.valid' class="btn btn-warning" (click)="updatesignup()" >Update Detail</button>
+                        
+
+
+
+                      </form>
+                      
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

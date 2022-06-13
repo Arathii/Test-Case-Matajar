@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "First_Name": "Arathi",
+      "Last_Name": "Unnikrishnan",
+      "Email_address": "test@gmail.com",
+      "Password": "123456",
+      "id": 4
+    },
+    {
+      "First_Name": "Arathi",
+      "Last_Name": "Unnikrishnan",
+      "Email_address": "test@gmail.com",
+      "Password": "123456",
+      "id": 5
+    },
+    {
+      "First_Name": "",
+      "Last_Name": "Unnikrishnan",
+      "Email_address": "test@gmail.com",
+      "Password": "123456",
+      "id": 6
+    }
+  ],
+  "signup": [
+    {
+      "First_Name": "Arathi",
+      "Last_Name": "Unnikrishnan",
+      "Email_address": "test@gmail.com",
+      "Password": "123456",
+      "id": 3
+    },
+    {
+      "First_Name": "ANOOP",
+      "Last_Name": "KL",
+      "Email_address": "test@gmail.com",
+      "Password": "MNBVC",
+      "id": 6
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

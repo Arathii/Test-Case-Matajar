@@ -1,0 +1,49 @@
+<div class="container" style="background: aliceblue;">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Add New Tutorial</h1>
+                    <h6>Please enter below!</h6>
+                </div>
+                <form style="border:2px solid DodgerBlue; background: rgba(22, 148, 206, 0); align-self: center; width: 50%; height: 50%;">
+                    <form [formGroup]="formValue" >
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Name</label>
+                            <input type="text" class="form-control" formControlName="name" id="exampleInputPassword1" placeholder="Tutorial Name" required>
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Mobile No:</label>
+                            <input type="text" class="form-control" formControlName="mobile" id="exampleInputPassword1" placeholder="Mobile No" required>
+                            <span class="text-danger" *ngIf="formValue.controls['mobile'].dirty && formValue.hasError('required','mobile')">*Mobile No is required</span>
+                          </div>
+                          
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Author Email Address" required>
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div><br>
+                          <span class="text-danger" *ngIf="formValue.controls['email'].dirty && formValue.hasError('required','email')">*Email id is required</span>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Description</label>
+                          <input type="text" class="form-control" formControlName="description" id="exampleInputPassword1" placeholder="Description" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Status</label>
+                          <input type="text" class="form-control" formControlName="status" id="exampleInputPassword1" placeholder="eg:published,not published" required>
+                          
+                          
+                        </div>
+
+                        
+                        <button type="submit"[disabled]='!formValue.valid' class="btn btn-info" (click)="addTuto()" >Add Tutorial</button>&nbsp;
+                        <button type="submit" class="btn btn-dark" routerLink="/tutorialdash">Close</button>
+
+                      </form>
+                      
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

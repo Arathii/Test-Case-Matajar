@@ -1,0 +1,38 @@
+<div class="container" style="background: aliceblue;">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Sign Up</h1>
+                    <h6>Register Yourself!</h6>
+                </div>
+                <form  style="border:2px solid DodgerBlue; background: rgba(22, 148, 206, 0.705); align-self: center; width: 50%; height: 50%;">
+                    <form [formGroup]="signupForm" (ngsubmit)="signUp()">
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">First_Name</label>
+                            <input formControlName="First_Name" type="text" class="form-control" id="exampleInputPassword1">
+                            
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Last_Name</label>
+                            <input formControlName="Last_Name" type="text" class="form-control" id="exampleInputPassword1">
+                          </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email_address</label>
+                          <input formControlName="Email_address" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input formControlName="Password" type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" (click)="signUp()">SignUp</button>
+                      </form>
+                      <a style="color:rgb(199, 26, 26); margin-top:10px;" routerLink="/login">Already Registered? click to Login!!</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

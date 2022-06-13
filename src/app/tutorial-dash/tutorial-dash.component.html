@@ -1,0 +1,55 @@
+<nav class="navbar navbar-light bg-primary" >
+    <div class="container-fluid">
+        <h2>Tutorial Record App</h2>
+        <div class="d-flex">
+            <button type="button" class="btn btn-success" routerLink="/addtutorial" >Add Tutorial</button>
+        </div>
+    </div >
+    <!-- <div class="form-group" style="align-self: center; margin-bottom: 50px;">
+      <input type="text" class="form-control" placeholder="search tutorial">
+    </div>
+    <span class="fa fa-search" aria-hidden="true"> </span> -->
+</nav>
+<!--Jumbotron-->
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Tutorial Records Management </h1>
+        <p class="col-md-8 fs-4">you can save records here!!!</p>
+        
+    </div>
+</div>
+<!--table-->
+<table class="table mt-4">
+    <thead>
+        <tr>
+            <th scope="col"> ID</th>
+            <th scope="col">First_Name</th>
+            <th scope="col">Last_Name</th>
+            <th scope="col">Email_address</th>
+            
+            <th scope="col">Password</th>
+            
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of allsignupData">
+            <td>{{data.id}}</td>
+            <td>{{data.First_Name}}</td>
+            <td>{{data.Last_Name}}</td>
+            <td>{{data.Email_address}}</td>
+            
+            <td>{{data.Password}}</td>
+            
+            <td>
+               
+                <button class="btn btn-info" (click)="editTutorial(data)"  >Edit</button>&nbsp;
+                <button class="btn btn-danger" (click)="deleteTutorial(data)" >Delete</button>&nbsp;
+                
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+  

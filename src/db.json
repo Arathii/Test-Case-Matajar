@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "name": "java",
+      "description": "crash course",
+      "email": "ase@gmail.com",
+      "mobile": "789765433",
+      "status": "published",
+      "id": 2
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

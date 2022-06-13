@@ -1,0 +1,28 @@
+<div class="container" style="background: aliceblue;">
+    <div class="row">
+        <div class="col-md-20">
+            <div class="card">
+                <div class="text-center">
+                    <h1>login</h1>
+                    <h6>please enter email and password</h6>
+                </div>
+                <form  style="border:2px solid DodgerBlue; background: rgba(22, 148, 206, 0.705); align-self: center; width: 50%; height: 50%;" >
+                    <form [formGroup]="loginForm"(ngSumit)="logIn()">
+                        <div class="mb-3" style="padding-top: 40px;">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input formControlName="Email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3" style="padding-top: 40px;">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input formControlName="Password" type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        
+                        <button style="align-self: center; " type="submit" class="btn btn-primary" routerLink="/tutorialdash">login</button>
+                      </form>
+                </form>
+                <a style="color:rgb(190, 38, 38); margin-top:10px;align-self: center;" routerLink="/signup">New User? click to Sign up!!</a>
+            </div>
+        </div>
+    </div>
+</div>
